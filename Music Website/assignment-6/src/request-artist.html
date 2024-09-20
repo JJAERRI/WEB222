@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Chaerin Yoo" />
+    <title>Request New Artist</title>
+    <link rel="stylesheet" href="./css/water.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+      }
+      header {
+        background-color: #ff7bf2;
+        padding: 20px;
+        text-align: center;
+        border-radius: 0 0 20px 20px;
+      }
+      header h1 {
+        margin: 0;
+        color: white;
+        font-size: 2.5em;
+      }
+      .form-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .form-container label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+      }
+      .form-container input,
+      .form-container textarea,
+      .form-container button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .form-container button {
+        background-color: #ff7bf2;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .form-container button:hover {
+        background-color: #e55bd8;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Request New Artist</h1>
+    </header>
+    <main>
+      <div class="form-container">
+        <form id="artist-request-form">
+          <label for="artist-name">Artist Name:</label>
+          <input type="text" id="artist-name" name="artist-name" required />
+
+          <label for="music-genre">Music Genre:</label>
+          <input list="genres" id="music-genre" name="music-genre" required />
+          <datalist id="genres">
+            <option value="Pop"></option>
+            <option value="Rock"></option>
+            <option value="Hip-Hop"></option>
+            <option value="Jazz"></option>
+            <option value="Classical"></option>
+            <option value="Country"></option>
+            <option value="Electronic"></option>
+            <option value="R&B"></option>
+            <option value="Reggae"></option>
+            <option value="Blues"></option>
+          </datalist>
+
+          <label for="social-media-urls">Social Media URLs:</label>
+          <input type="url" id="social-media-urls" name="social-media-urls" multiple required />
+
+          <label for="example-songs">Example Songs/Videos URLs:</label>
+          <div id="song-urls-container">
+            <input type="url" id="example-songs" name="example-songs" multiple required />
+            <button type="button" id="add-song-url">Add Another URL</button>
+          </div>
+
+          <label for="explicit-lyrics">Contains Explicit Lyrics:</label>
+          <input type="checkbox" id="explicit-lyrics" name="explicit-lyrics" />
+
+          <label for="description">Why should this artist be added?</label>
+          <textarea id="description" name="description" required></textarea>
+
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
+    </main>
+    <script src="./js/request-artist.js"></script>
+  </body>
+</html>

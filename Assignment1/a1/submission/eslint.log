@@ -1,0 +1,11 @@
+
+> web222-assignment-1@6.0.0 eslint
+> eslint src/**/*.js
+
+
+C:\Users\rhyn2\OneDrive\바탕 화면\WEB222\1주차\a1\src\solutions.js
+  451:10  error  '_' is assigned a value but never used  no-unused-vars
+  472:10  error  '_' is assigned a value but never used  no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
